@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar root="Exit" version="1.0" xml:lang="fr">
+
+  <meta name="description" content="grammaire sortie"/>
+
+  <rule id="Exit" >
+        <one-of>
+            <item> sortir </item>
+            <item> quitter  </item>
+            <item> quit </item>
+            <item> exit </item>
+	</one-of>
+  </rule>
+
+</grammar>

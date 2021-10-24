@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar version="1.0" root="duree" xml:lang="fr">
+
+<meta name="description" content="grammaire duree"/>
+<meta name="author" content="Aniss LOUAHADJ ET Alexandre LANGLADE"/>
+
+
+<rule id = "duree" scope = "public">
+<item repeat="0-1"> Durant   </item>
+<item repeat="0-1"> Pour     </item>
+<item repeat="0-1"> Pendant   </item>
+
+<item>
+		<ruleref uri="grammaire_nombre_v3.grxml#nombre" /> 
+		<one-of>
+		<item> heures <tag> out.comp=" heures" </tag> </item>
+		<item> heure <tag> out.comp=" heure" </tag></item>
+		</one-of>
+		
+		<tag> out.duree = rules.nombre.nb; out.text = meta.nombre.text+ out.comp;</tag>
+</item>
+</rule>
+</grammar>

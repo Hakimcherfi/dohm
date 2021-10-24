@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- fichier horaire.grxml -->
+
+<grammar version="1.0" root="Horaire" xml:lang="fr" >
+
+<meta name="description" content="grammaire des horaires"/>
+<meta name="author" content="Hakim Cherfi"/>
+<meta name="copyright" content="free for any purpose"/>
+
+<rule id="Horaire" scope="public">
+
+	<item> <ruleref uri="#Heure"/> <tag> out.text = rules.Heure.text ; out.num_minute = 0; </tag> </item> 
+	<item repeat="0-1"> <ruleref uri="#minutes"/> <tag> out.text = out.text + rules.minutes.text ; out.num_minute = rules.minutes.num_minute </tag> </item>
+	<tag>  out.num_heure = rules.Heure.num_heure </tag>
+</rule>
+
+	<rule id="Heure" scope="public">
+		<one-of>
+				<item> une heure    <tag> out.num_heure = 1 ;  </tag> </item>
+				<item>
+					<ruleref uri="grammaire_nombre_v3.grxml#nombre" /> heures
+					<tag> out.num_heure = rules.nombre.nb; out.text = rules.nombre.text </tag>
+					</item>
+				<item>
+					<ruleref uri="#horairenomme" />
+					<tag> out.num_heure = rules.horairenomme.num_heure; out.text = rules.horairenomme.text </tag>
+					</item>
+		</one-of>
+		<tag> out.text = meta.current().text + " "</tag>
+	</rule>
+	
+	<rule id="horairenomme" scope="public">
+		<one-of>
+				<item> midi <tag> out.num_heure = 12 ; </tag> </item>
+				<item> minuit <tag> out.num_heure = 0 ; </tag> </item>
+		</one-of>
+		<tag> out.text = meta.current().text + " "</tag>
+		
+	</rule>
+	
+	<rule id="minutes" scope="public">
+		<one-of>
+				<item> pile <tag> out.num_minute = 0 ; </tag> </item>
+				<item> <ruleref uri="grammaire_nombre_v3.grxml#nombre" />
+					<tag> out.num_minute = rules.nombre.nb ; out.text = rules.nombre.text </tag>
+					</item>
+		</one-of>
+		<tag> out.text = meta.current().text + " "</tag>
+	</rule>
+	
+	<rule id="minutes_relat" scope="public">
+		<one-of>
+				<item> demi <tag> out.num_minute = 30 ; </tag> </item>
+				<item> quart <tag> out.num_minute = 15 ; </tag> </item>
+	</rule>
+	
+	<rule id="moins" scope="public">
+		<item> moins </item>
+		<tag> out.flag = 1 </flag>
+		</rule>
+		
+
+</grammar>
