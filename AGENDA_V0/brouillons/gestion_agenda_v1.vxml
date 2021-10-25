@@ -44,29 +44,25 @@
    	<value expr="now.valueOf()" />
 </block>
 
-<!-- Champ/Slot NUMERO D'ABONNE -->
-<field name="num_abonne">
+<!-- Champ/Slot DATE -->
+<field name="date">
 
-	 <prompt> Quel est votre numero d'abonne ? </prompt>
+	 <prompt> A quelle date souhaitez vous reserver ? </prompt>
 
          <!-- Appel a une grammaire externe -->
-	 <grammar src="grammaire_num_ab_v2.grxml" type="application/srgs+xml"/>
+	 <grammar src="grammaire_dates_v3.grxml" type="application/srgs+xml"/>
 
          <!-- Gestion des erreurs -->
-         <help> Donner un nombre compris entre 1 et 999 999 </help>
-         <noinput> Je n'ai pas entendu. Pouvez-vous me preciser votre numero d'abonne ? </noinput>
-	 <nomatch> Je n'ai pas compris. Pouvez-vous me donner votre numero d'abonne S.V.P ? </nomatch>
+         <help> Donner une date valide </help>
+         <noinput> Je n'ai pas entendu. Pouvez-vous me donner la date ? </noinput>
+	 <nomatch> Je n'ai pas compris. Pouvez-vous me donner la date S.V.P ? </nomatch>
 
          <!-- Comportement du systeme une fois ce champ rempli -->
 	 <filled>
-	         Votre numero d'abonne est le <value expr="num_abonne.text" /> 
+	         La date demandee est le <value expr="date.nb_jour"/> / <value expr="date.num_mois+1"/> / <value expr="date.nb_annee"/>
                  <if cond="mode_trace=='True'">
-                   TRACE VALEUR  <value expr="num_abonne.nb" />
+                   TRACE VALEUR  <value expr="date" />
                  </if>
-				 <if cond="num_abonne.nb &gt; 2500">
-				 numero pas entre 1 et 2500
-				 <clear namelist="num_abonne"/>
-				</if>
          </filled>
   </field>
 
@@ -88,10 +84,10 @@
 
          <filled>
                  <if cond="confirm=='True'">
-                     <assign name="message_confirm" expr="'TRACE Numero confirme'" />
+                     <assign name="message_confirm" expr="'TRACE Date confirmee'" />
                  <else/>
-                     <assign name="message_confirm" expr="'TRACE Numero non confirme'" />
-                     <clear namelist="num_abonne confirm" />
+                     <assign name="message_confirm" expr="'TRACE Date non confirmee'" />
+                     <clear namelist="date confirm" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 				
@@ -104,8 +100,8 @@
 
 <block>
        <!-- Simulation autorisation d'acces -->
-	Veuillez patienter ... Nous nous connectons a la base abonne....
-        Bonjour Monsieur Dupont. Vous pouvez maintenant acceder a votre agenda !
+	Veuillez patienter ... Nous nous connectons a la base reservation....
+        Bonjour Monsieur Dupont. Vous pouvez maintenant acceder a votre systeme de reservation !
 </block>
 
 </form>
