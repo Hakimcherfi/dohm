@@ -1,0 +1,52 @@
+Created from template: |append [ot_log-%y-%m-%d_%H_%M_%s.log] 
+Number of records: 100000
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-12 08:46:06.089 ALW {N/A} <N/A> [OptimComponents Core]
+========== Log start ==========
+
+2021-Oct-12 08:46:06.089 INFO {N/A} <N/A> [OptimComponents Core]
+Created session with ID 'vxmlDialog_0'.
+
+2021-Oct-12 08:46:06.766 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml'.
+
+2021-Oct-12 08:46:06.790 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml' completed.
+  result = success
+
+2021-Oct-12 08:46:06.829 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml'
+
+2021-Oct-12 08:46:06.845 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'error.badfetch' was added to the event queue
+
+2021-Oct-12 08:46:06.845 ERR  {vxmlDialog_0} <System message> [VoiceXML interpreter]
+An unhandled error event 'error.badfetch' occurred (It will be processed by a default platform error handler). The following message was associated with the event: document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml', line 25; Cannot load grammar 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/grammaire_quitter.grxml' since an error occurred in call to Resource Loader. Resource Loader reports: Cannot open stream. since an error occurred in call to file stream. file stream reports: Cannot open file "D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/grammaire_quitter.grxml".
+
+2021-Oct-12 08:46:06.845 WARN {vxmlDialog_0} <Alarm> [VoiceXML interpreter]
+optimtalk.interpretationError: An unhandled error event 'error.badfetch' occurred (It will be processed by a default platform error handler). The following message was associated with the event: document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml', line 25; Cannot load grammar 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/grammaire_quitter.grxml' since an error occurred in call to Resource Loader. Resource Loader reports: Cannot open stream. since an error occurred in call to file stream. file stream reports: Cannot open file "D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/grammaire_quitter.grxml".
+
+2021-Oct-12 08:46:06.845 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'error.badfetch'.
+  Event origin = document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml'; line 25
+  Handler location = platform default handler
+
+2021-Oct-12 08:46:06.853 ERR  {vxmlDialog_0} <user's application> [VoiceXML interpreter]
+Unhandled error event 'error.badfetch' occurred. Associated message: document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml', line 25; Cannot load grammar 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/grammaire_quitter.grxml' since an error occurred in call to Resource Loader. Resource Loader reports: Cannot open stream. since an error occurred in call to file stream. file stream reports: Cannot open file "D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/grammaire_quitter.grxml".
+
+2021-Oct-12 08:46:06.861 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpretation finished.
+  value returned by <exit> = 
+{
+}
+  value returned by <disconnect> = 
+undefined
+
+2021-Oct-12 08:46:06.917 INFO {N/A} <N/A> [OptimComponents Core]
+Deleted session with ID 'vxmlDialog_0'.
+

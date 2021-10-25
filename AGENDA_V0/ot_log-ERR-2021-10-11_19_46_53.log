@@ -1,0 +1,23 @@
+Created from template: |append [ot_log-ERR-%y-%m-%d_%H_%M_%s.log] 
+Number of records: unlimited
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-11 19:46:53.396 ERR  {ccxmlSessionManager} <Interpretation tracking> [CCXML Session Manager]
+Event to platform: {
+  name: "error.createccxml",
+  eventid: "ccxmlEvent_2",
+  eventsource: "0",
+  eventsourcetype: "ccxml",
+  eventtarget: "",
+  eventtargettype: "ccxml",
+  delay: "0s",
+  sessionid: "ccxmlSession_0",
+  reason: "CCXML interpreter reports: Cannot load document 'file:/D:/3ASRI/DialogueOralHM/TP1/AGENDA_V0/gestion_agenda_v1modif.vxml' since an error occurred in call to CCXML Document Processor..
+CCXML Document Processor reports: line 5, column 1; Unknown tag <vxml>..
+"
+}
+

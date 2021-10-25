@@ -63,10 +63,6 @@
                  <if cond="mode_trace=='True'">
                    TRACE VALEUR  <value expr="num_abonne.nb" />
                  </if>
-				 <if cond="num_abonne.nb &gt; 2500">
-				 numero pas entre 1 et 2500
-				 <clear namelist="num_abonne"/>
-				</if>
          </filled>
   </field>
 
@@ -94,7 +90,7 @@
                      <clear namelist="num_abonne confirm" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
-				
+
                  <if cond="mode_trace=='True'">
                    TRACE Reponse <value expr="message_confirm" />
                  </if>

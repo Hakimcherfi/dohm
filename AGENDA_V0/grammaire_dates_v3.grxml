@@ -20,6 +20,7 @@
 	                           out.nb_jour = rules.latest().nb_jour ;
                                    out.num_mois = rules.latest().num_mois ;
                                    out.nb_annee = rules.latest().nb_annee;
+								   out.text = rules.latest().text;
                        </tag>
      </rule>
 
@@ -46,7 +47,7 @@
                      analyse par la grammaire NOMBRE -->
 
                 <one-of>
-	               <item> premier <tag> out.nb_jour = 1; out.text = "premier "; </tag> </item>
+	               <item> premier <tag> out.nb_jour = 1; out.text = "premier"; </tag> </item>
 	               <item>
                              <ruleref uri="grammaire_nombre_v3.grxml#nombre" />
                              <tag> out.nb_jour = rules.nombre.nb; out.text = out.text + meta.nombre.text ; </tag>
@@ -69,6 +70,7 @@
                                 <tag> out.num_jour = rules.latest().num_jour ;
                                       out.nb_jour = rules.latest().nb_jour ;
                                       out.num_mois = rules.latest().num_mois ;
+									  out.text = rules.latest().text;
                                 </tag>
                 </item>
 	        <item>

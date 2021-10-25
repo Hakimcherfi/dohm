@@ -106,6 +106,8 @@
 	<!-- Chiffres    -->
 		<rule id="chiffres">
 			<one-of>
+			<!-- Ajout de "une"    -->
+				<item> une      <tag> out.nb = 1 ; </tag> </item>
 				<item> deux      <tag> out.nb = 2 ; </tag> </item>
 				<item> trois     <tag> out.nb = 3 ; </tag> </item>
 				<item> quatre    <tag> out.nb = 4 ; </tag> </item>

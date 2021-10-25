@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar version="1.0" root="Horaire" xml:lang="fr">
+
+<meta name="description" content="grammaire horaire"/>
+<meta name="author" content="Aniss LOUAHADJ ET Alexandre LANGLADE"/>
+
+
+
+<rule id = "Horaire" scope = "public">
+	<ruleref special="GARBAGE" />
+	<one-of>
+		<item>
+			<ruleref uri= "#NB_heures"/>
+			<tag>out.nb_heures = rules.latest().nb_heures;</tag>
+			<tag> out.nb_minutes = 0; out.text="";</tag>
+			<item repeat ="0-1">
+				<ruleref uri="#NB_minutes"/>
+				<tag> out.nb_minutes = rules.latest().nb_minutes; out.text = " "+meta.NB_minutes.text;</tag>
+			</item>
+		</item>
+
+		<item>
+			<ruleref uri= "#NB_heures"/> moins
+			<tag>
+				if(rules.latest().nb_heures ==0) out.nb_heures =23;
+				else out.nb_heures = rules.latest().nb_heures-1;
+			</tag>
+			<ruleref uri="#NB_minutes"/>
+			<tag>
+				out.nb_minutes = 60-rules.latest().nb_minutes;
+				out.text = " moins "+meta.NB_minutes.text;
+			</tag>
+
+
+
+		</item>
+		
+		
+	</one-of>
+	<tag>
+		out.nb_total_min = out.nb_heures*60 + out.nb_minutes;
+		out.text = meta.NB_heures.text+out.text;
+	</tag>
+
+
+
+</rule>
+
+<rule id="NB_heures">
+<one-of>
+		<item> midi <tag> out.nb_heures = 12; out.text = "midi";</tag> </item>
+		<item> minuit <tag> out.nb_heures = 00; out.text = "minuit";</tag> </item>
+		<item> une heure <tag> out.nb_heures = 1; out.text = "une heure";</tag> </item>
+		<item>
+			 <ruleref uri="grammaire_nombre_v3.grxml#nombre" /> heures
+			 <tag> out.nb_heures = rules.nombre.nb; out.text = meta.nombre.text;</tag>
+		</item>
+		
+</one-of>
+	
+	</rule>
+
+
+<rule id="NB_minutes">
+	<one-of>
+		<item>
+			<item repeat="0-1"> et </item>
+			<item repeat="0-1"> le </item> 
+			quart  <tag> out.nb_minutes = 15;</tag> 
+		</item>
+		<item>
+			<item repeat="0-1"> et </item>
+			<item repeat="0-1"> la </item> 
+			demie <tag> out.nb_minutes = 30;</tag> </item>
+		<item>
+			<item repeat="0-1">
+				et
+			</item>
+			une
+			<item repeat="0-1"> 
+			minute
+			</item>
+			<tag> out.nb_minutes = 1; </tag>
+		</item>
+
+		<item>
+			<item repeat="0-1">
+				et
+			</item>
+			<ruleref uri="grammaire_nombre_v3.grxml#nombre" />
+			<item repeat="0-1"> minutes </item>
+			<tag> out.nb_minutes = rules.nombre.nb; out.text = meta.nombre.text;</tag>
+		</item>
+		
+</one-of>
+
+
+</rule>
+
+
+
+
+</grammar>

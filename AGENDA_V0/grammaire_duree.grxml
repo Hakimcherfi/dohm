@@ -7,18 +7,21 @@
 
 
 <rule id = "duree" scope = "public">
-<item repeat="0-1"> Durant   </item>
 <item repeat="0-1"> Pour     </item>
+<item repeat="0-1"> Pour une duree de     </item>
+<item repeat="0-1"> Pour une durée d'     </item>
 <item repeat="0-1"> Pendant   </item>
 
 <item>
 		<ruleref uri="grammaire_nombre_v3.grxml#nombre" /> 
 		<one-of>
-		<item> heures <tag> out.comp=" heures" </tag> </item>
-		<item> heure <tag> out.comp=" heure" </tag></item>
+		<item> heures <tag> out.h=" heures" </tag> </item>
+		<item> heure <tag> out.h=" heure" </tag></item>
 		</one-of>
-		
-		<tag> out.duree = rules.nombre.nb; out.text = meta.nombre.text+ out.comp;</tag>
+		<tag> out.duree = rules.nombre.nb; out.text = meta.nombre.text+ out.h;</tag>
 </item>
+
+	
 </rule>
+
 </grammar>
