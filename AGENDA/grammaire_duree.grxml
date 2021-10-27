@@ -3,7 +3,7 @@
 <grammar version="1.0" root="duree" xml:lang="fr">
 
 <meta name="description" content="grammaire duree"/>
-<meta name="author" content="Aniss LOUAHADJ ET Alexandre LANGLADE"/>
+<meta name="author" content="Hakim Cherfi"/>
 
 
 <rule id = "duree" scope = "public">

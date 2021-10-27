@@ -22,6 +22,9 @@
 				<item> un      
                                        <tag> out.nb = 1 ; out.text = meta.current().text</tag>
                                 </item>
+				<item> une
+						<tag>out.nb = 1 ; out.text = meta.current().text</tag>
+				</item>
 
                        <!-- chiffres de 2 a 9 -->
 				<item> <ruleref uri="#chiffres" /> 
