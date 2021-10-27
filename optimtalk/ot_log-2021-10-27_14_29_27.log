@@ -1,0 +1,33 @@
+Created from template: |append [ot_log-%y-%m-%d_%H_%M_%s.log] 
+Number of records: 100000
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-27 14:29:27.286 ALW {N/A} <N/A> [OptimComponents Core]
+========== Log start ==========
+
+2021-Oct-27 14:29:27.286 INFO {N/A} <N/A> [OptimComponents Core]
+Created session with ID 'vxmlDialog_0'.
+
+2021-Oct-27 14:29:27.641 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA_V0/gestion_agenda_v1.vxml'.
+
+2021-Oct-27 14:29:27.703 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'error.badfetch' was added to the event queue
+
+2021-Oct-27 14:29:27.703 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA_V0/gestion_agenda_v1.vxml' completed.
+  result = failure
+
+2021-Oct-27 14:29:27.703 ERR  {vxmlDialog_0} <interpretation error> [VoiceXML interpreter]
+The following error occurred during the interpretation: A VoiceXML event 'error.badfetch' was generated during preparing of a VoiceXML document. The following message was associated with the event: Cannot load document 'file:/C:/Users/hakim/Desktop/TP/AGENDA_V0/gestion_agenda_v1.vxml' since an error occurred in call to VoiceXML Document Processor. VoiceXML Document Processor reports: line 185, column 22; Text is not allowed as content of element <else>.
+
+2021-Oct-27 14:29:27.703 WARN {vxmlDialog_0} <Alarm> [VoiceXML interpreter]
+optimtalk.interpretationError: The following error occurred during the interpretation: A VoiceXML event 'error.badfetch' was generated during preparing of a VoiceXML document. The following message was associated with the event: Cannot load document 'file:/C:/Users/hakim/Desktop/TP/AGENDA_V0/gestion_agenda_v1.vxml' since an error occurred in call to VoiceXML Document Processor. VoiceXML Document Processor reports: line 185, column 22; Text is not allowed as content of element <else>.
+
+2021-Oct-27 14:29:27.776 INFO {N/A} <N/A> [OptimComponents Core]
+Deleted session with ID 'vxmlDialog_0'.
+

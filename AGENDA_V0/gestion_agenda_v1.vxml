@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ATTENTION : UTF-8 = PAS DE CARACTERES ACCENTUES -->
 <!-- si PB message : Invalid UTF-8 character --> 
-
 <vxml version="2.0" xmlns="http://www.w3.org/2001/vxml">
-
 <meta name="description" content="Gestion agenda version 0"/>
-<meta name="author" content="Isabelle Ferrane"/>
+<meta name="author" content="Hakim Cherfi"/>
 <meta name="copyright" content="IUP SI M2 Pro Dialogue"/>
 
 <!-- Version de base : gestion de dialogue et comprehension -->
@@ -79,7 +77,7 @@
                 <if cond="num_abonne.nb &gt;= 0 &amp;&amp; num_abonne.nb &lt;= 2500">
                       Votre numero d'abonne est le <value expr="num_abonne.text" /> 
                 <else/>
-                      Votre numero n'est pas entre 0 et 2500 />
+                      Votre numero n'est pas entre 0 et 2500
                      <clear namelist="num_abonne" />       
                 </if>
                 
@@ -94,13 +92,11 @@
          <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
          
          <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non </help>
+         <help> Repondez par oui ou non. </help>
          <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non </nomatch>
+         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ? </nomatch>
          
          <!-- Comportement du systeme apres confirmation/infirmation --> 
-         <!-- OK ==> On sort ou on passe a une autre sous-tache -->
-         <!-- NOK ==> On efface tout et on recommence --> 
 
          <filled>
                  <if cond="confirm=='True'">
@@ -128,10 +124,10 @@
        <!-- Gestion des erreurs -->
        <help> Veuillez preciser la date pour votre rendez vous en indiquant au moins le jour et le mois.</help>
        <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-       <nomatch> Je ne vous ai pas compris. Pouvez-vous m'indiquer une date. </nomatch>
+       <nomatch> Je ne vous ai pas compris. Pouvez-vous m'indiquer une date ? </nomatch>
 
        <filled>
-				Votre date est <value expr="date_resa.nb_jour"/>/<value expr="date_resa.num_mois+1"/>/<value expr="date_resa.nb_annee" />
+				Votre date est le <value expr="date_resa.nb_jour"/>/<value expr="date_resa.num_mois+1"/>/<value expr="date_resa.nb_annee" />
        </filled>
 </field>
 
@@ -143,9 +139,9 @@
          <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
          
          <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non </help>
+         <help> Repondez par oui ou non. </help>
          <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non </nomatch>
+         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ?</nomatch>
          
          <!-- Comportement du systeme apres confirmation/infirmation --> 
          <!-- OK ==> On sort ou on passe a une autre sous-tache -->
@@ -180,9 +176,14 @@
        <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
        <nomatch> Je ne vous ai pas compris. Pouvez-vous m'indiquer un horaire svp ? </nomatch>
 	   
-	   <filled>
-			L'heure est <value expr="horaire_resa.text" />
-	   </filled>
+       <filled>
+              <if cond="horaire_resa.NTMN &lt;450 || horaire_resa.NTMN &gt;1170">
+                     Veuillez choisir une heure entre 7h30 et 19h30.
+                     <clear namelist="horaire_resa"/>
+              <else/>
+                     L'heure de reservation est : <value expr="horaire_resa.text" />
+              </if>
+       </filled>
 
 </field>
 
@@ -194,9 +195,9 @@
          <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
 		 
          <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non </help>
+         <help> Repondez par oui ou non. </help>
          <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non </nomatch>
+         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ?</nomatch>
          
          <!-- Comportement du systeme apres confirmation/infirmation --> 
          <!-- OK ==> On sort ou on passe a une autre sous-tache -->
@@ -268,7 +269,6 @@
 
 </field>
 
-
 <!-- Champ/Slot SALLE de RESERVATION  -->
 <field name="salle_resa">
        <prompt> Quelle salle souhaitez vous reserver ? </prompt>
@@ -322,7 +322,6 @@
 <block>
        <!-- Simulation autorisation d'acces -->
 	Veuillez patienter ... Nous nous connectons a la base abonne....
-        Bonjour Monsieur Dupont. Vous pouvez maintenant acceder a votre agenda !
 </block>
 
 </form>

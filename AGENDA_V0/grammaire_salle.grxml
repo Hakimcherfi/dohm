@@ -3,7 +3,7 @@
 <grammar version="1.0" root="salle" xml:lang="fr">
 
 <meta name="description" content="Liste Chiffres"/>
-<meta name="author" content="LOUAHADJ Aniss LANGLADE Alexandre"/>
+<meta name="author" content="Hakim Cherfi"/>
 <meta name="copyright" content="IUP SI M1"/>
 
 <rule id="salle" scope="public">
@@ -12,14 +12,16 @@
 			<item> 100 <tag> out.nomSalle = "100" </tag> </item>
 			<item> 101 <tag> out.nomSalle = "101" </tag> </item>
 		</one-of>
-        <item repeat="0-1"> Du batiment  </item>
-        <item repeat="0-1"> Batiment  </item>
-		
         <tag> out.batiment = "" </tag>
-        <one-of> 
-            <item repeat="0-1"> AIP <tag> out.batiment = "A l'AIP" </tag>  </item>
-            <item repeat="0-1"> U3 <tag> out.batiment = "En batiment U3" </tag>  </item>
-        </one-of>
-        
+        <item repeat="0-1">
+            <one-of>
+                <item> du batiment</item>
+                <item> batiment </item>
+            </one-of>
+            <one-of>
+                <item> AIP <tag>out.batiment = "a l'AIP"</tag> </item>
+                <item> U3 <tag> out.batiment = "en U3"</tag></item>
+            </one-of>
+        </item>
 	</rule>
 </grammar>

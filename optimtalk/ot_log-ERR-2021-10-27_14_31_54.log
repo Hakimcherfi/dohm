@@ -1,0 +1,11 @@
+Created from template: |append [ot_log-ERR-%y-%m-%d_%H_%M_%s.log] 
+Number of records: unlimited
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-27 14:31:54.718 ERR  {vxmlDialog_0} <interpretation error> [VoiceXML interpreter]
+The following error occurred during the interpretation: A VoiceXML event 'error.badfetch' was generated during preparing of a VoiceXML document. The following message was associated with the event: Cannot load document 'file:/C:/Users/hakim/Desktop/TP/AGENDA_V0/gestion_agenda_v1.vxml' since an error occurred in call to VoiceXML Document Processor. VoiceXML Document Processor reports: line 185, column 22; Text is not allowed as content of element <else>.
+
