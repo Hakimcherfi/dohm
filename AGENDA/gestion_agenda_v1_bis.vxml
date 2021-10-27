@@ -126,51 +126,17 @@
        <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
        <nomatch> Je ne vous ai pas compris. Pouvez-vous m'indiquer une date ? </nomatch>
 
-       <filled>
-				Votre date est le <value expr="date_resa.text"/>
-       </filled>
-</field>
-
-<!-- Champ/Slot de confirmation  -->
-  <field name="confirmDate">
-         <prompt> Pouvez-vous me le confirmer ? </prompt>
-         
-         <!-- Appel a une grammaire externe -->
-         <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
-         
-         <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non. </help>
-         <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ?</nomatch>
-         
-         <!-- Comportement du systeme apres confirmation/infirmation --> 
-         <!-- OK ==> On sort ou on passe a une autre sous-tache -->
-         <!-- NOK ==> On efface tout et on recommence --> 
-
-         <filled>
-                 <if cond="confirmDate=='True'">
-                     <assign name="message_confirm" expr="'TRACE Date confirmee'" />
-                 <else/>
-                     <assign name="message_confirm" expr="'TRACE Date non confirmee'" />
-                     <clear namelist="date_resa confirmDate" />
-                 </if>
-                 <!-- Comportement si le mode TRACE est active --> 
-
-                 <if cond="mode_trace=='True'">
-                   TRACE Reponse <value expr="message_confirm" />
-                 </if>
-         </filled>
-		 
-
 </field>
 
 <!-- Champ/Slot HORAIRE RESERVATION  -->
 <field name="horaire_resa">
-       <prompt> A quelle heure voulez-vous prendre rdv ? </prompt>
+       <prompt> A quelle heure voulez-vous prendre rdv le <value expr="date_resa.text"/> ? </prompt>
 
        <!-- Appel a une grammaire externe -->
-       <grammar src="grammaire_horaire.grxml" type="application/srgs+xml" />
-
+       <grammar src="confirmer_Date_donner_Horaire.grxml#confirmer" type="application/srgs+xml" />
+	<if cond="horaire_resa.flag == 0">
+	
+	<elseif cond 
        <!-- Gestion des erreurs -->
        <help> Veuillez choisir un horaire.</help>
        <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
@@ -188,7 +154,7 @@
 </field>
 
 <!-- Champ/Slot de confirmation  -->
-  <field name="confirmHoraire">
+ <field name="confirmHoraire">
          <prompt> Pouvez-vous me le confirmer ? </prompt>
          
          <!-- Appel a une grammaire externe -->

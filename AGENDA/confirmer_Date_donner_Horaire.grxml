@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar version="1.0" root="confirmer" xml:lang="fr">
+
+<meta name="description" content="grammaire horaire"/>
+<meta name="author" content="Hakim Cherfi"/>
+
+
+
+<rule id = "confirmer" scope = "public">
+	<ruleref special="GARBAGE" />
+	<one-of>
+		<item> <ruleref uri="grammaire_horaire.grxml#Horaire"/> <tag> out.flag = 0 ; </tag></item>
+		<item> Non <tag> out.flag = 1 ; </tag> </item>
+		<item> Non le <ruleref uri="grammaire_dates_v3.grxml#Date"/> <tag> out.flag = 2 ; </tag> </item>
+	</one-of>
+</rule>
+
+</grammar>
