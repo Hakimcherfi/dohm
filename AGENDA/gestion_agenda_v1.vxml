@@ -23,9 +23,11 @@
 </link>
 
 <catch event="quitter">
-       <prompt> Vous quittez l'application </prompt>
+       <prompt> On quitte l'application </prompt>
        <exit/>
 </catch> 
+
+
 
 <!-- dialogue de demande d'information -->
 

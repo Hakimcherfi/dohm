@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar version="1.0" root="reponse_mixte" xml:lang="fr">
+
+<!-- Confirmation ou non confirmation -->
+<rule id="reponse_mixte" scope="public">
+      <one-of>
+                <item> 
+                        <item repeat="0-1"> A   </item>
+                        <ruleref uri="grammaire_horaireUgo.grxml#Horaire"/> 
+                        <tag> out.flag ="0" </tag>
+                        <tag> out.NBTTM = rules.Horaire.NBTTM </tag>
+                        <tag> out.nb_h = rules.Horaire.nb_h </tag>
+                        <tag> out.nb_m = rules.Horaire.nb_m </tag>
+                </item>
+
+                <item> <ruleref uri="#non" /> <tag> out.flag ="1" </tag> </item>
+        
+                <item>
+                        <ruleref uri="#non" />
+                        <ruleref uri="grammaire_dates_v3.grxml#Date" />
+                        <tag> out.flag ="2" </tag>
+                        <tag> out.num_jour = rules.Date.num_jour </tag>
+                        <tag> out.nb_jour = rules.Date.nb_jour </tag>
+                        <tag> out.num_mois = rules.Date.num_mois </tag>
+                        <tag> out.nb_annee = rules.Date.nb_annee </tag>
+                        <tag> out.text_date = rules.Date.text </tag>
+                </item>
+
+      </one-of>
+
+</rule> 
+
+
+        
+
+        <rule id="non" >
+               <one-of>
+                        <item repeat="1-2"> non </item>
+               </one-of>
+        </rule>
+
+
+
+</grammar>
