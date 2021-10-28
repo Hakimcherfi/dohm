@@ -10,7 +10,7 @@
 <!-- grammaire regle syntagmatique Date -> [le +] [Jour +] Num_Jour + Mois [+ Annee] -->
 <!-- cette grammaire extrait le texte correspondant a la date enoncee .text -->
 <!-- ainsi que les valeurs necessaires a la generation d'une date au format Ecmascript -->
-<!--enlever le +1 ligne 21 ? -->
+
      <rule id = "Date" scope = "public">
 	      <one-of>
 	              <item> <ruleref uri="#Sans_annee"/> </item>
@@ -18,9 +18,8 @@
 	      </one-of>
 	               <tag>       out.num_jour = rules.latest().num_jour ;
 	                           out.nb_jour = rules.latest().nb_jour ;
-                                   out.num_mois = rules.latest().num_mois+1 ;
+                                   out.num_mois = rules.latest().num_mois ;
                                    out.nb_annee = rules.latest().nb_annee;
-								   out.text =out.nb_jour+"/"+out.num_mois+"/"+out.nb_annee ;
                        </tag>
      </rule>
 
