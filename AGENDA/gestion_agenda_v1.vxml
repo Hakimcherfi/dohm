@@ -116,6 +116,11 @@
 
 </field>
 
+<block>
+       <!-- Simulation autorisation d'acces -->
+	Veuillez patienter ... Nous nous connectons a la base abonne....
+</block>
+
 <!-- Champ/Slot DATE de RESERVATION  -->
 <field name="date_resa">
        <prompt> A quelle date voulez-vous prendre rdv ? </prompt>
@@ -321,10 +326,68 @@
 
 </field>
 
+<!-- Champ/Slot MOTIF -->
+<field name="motif_resa">
+
+       <prompt> Quel est votre motif de reservation ? (reunion, conference, aucun) </prompt>
+
+        <!-- Appel a une grammaire externe -->
+       <grammar src="grammaire_motif.grxml" type="application/srgs+xml"/>
+
+        <!-- Gestion des erreurs -->
+        
+        
+
+        <help> Donner un motif de reservation (reunion, conference ou aucun) </help>
+        <noinput> Je n'ai pas entendu. Pouvez-vous me preciser un motif ? </noinput>
+       <nomatch> Je n'ai pas compris. Pouvez-vous me donner votre motif ? </nomatch>
+
+        <!-- Comportement du systeme une fois ce champ rempli -->
+       <filled>
+               <if cond="mode_trace=='True'">
+                         TRACE VALEUR  <value expr="motif_resa.text" />
+               </if>
+               Votre motif est <value expr="motif_resa.text"/>
+        </filled>
+ </field>
+
+<!-- Champ/Slot de confirmation  -->
+ <field name="confirm_motif">
+        <prompt> Pouvez-vous me le confirmer ? </prompt>
+        
+        <!-- Appel a une grammaire externe -->
+        <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
+        
+        <!-- Gestion des erreurs -->
+        <help> Repondez par oui ou non. </help>
+        <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
+        <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ? </nomatch>
+        
+        <!-- Comportement du systeme apres confirmation/infirmation --> 
+
+        <filled>
+                <if cond="confirm_motif=='True'">
+                    <assign name="message_confirm" expr="'TRACE motif confirme'" />
+                <else/>
+                    <assign name="message_confirm" expr="'TRACE motif non confirme'" />
+                    <clear namelist="motif_resa confirm_motif" />
+                </if>
+                <!-- Comportement si le mode TRACE est active --> 
+
+                <if cond="mode_trace=='True'">
+                  TRACE Reponse <value expr="message_confirm" />
+                </if>
+        </filled>
+
+</field>
+
+
 <block>
        <!-- Simulation autorisation d'acces -->
-	Veuillez patienter ... Nous nous connectons a la base abonne....
+	Veuillez patienter ... Reservation confirmee !
 </block>
+
+
 
 </form>
 </vxml>

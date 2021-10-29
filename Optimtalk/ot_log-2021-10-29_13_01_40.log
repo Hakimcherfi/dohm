@@ -1,0 +1,327 @@
+Created from template: |append [ot_log-%y-%m-%d_%H_%M_%s.log] 
+Number of records: 100000
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-29 13:01:40.126 ALW {N/A} <N/A> [OptimComponents Core]
+========== Log start ==========
+
+2021-Oct-29 13:01:40.126 INFO {N/A} <N/A> [OptimComponents Core]
+Created session with ID 'vxmlDialog_0'.
+
+2021-Oct-29 13:01:40.237 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'.
+
+2021-Oct-29 13:01:40.237 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml' completed.
+  result = success
+
+2021-Oct-29 13:01:40.237 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'
+
+2021-Oct-29 13:01:40.237 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'agenda'; line 34; column 1.
+
+2021-Oct-29 13:01:40.237 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <block>; line 51; column 1.
+
+2021-Oct-29 13:01:40.237 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'num_abonne'; line 59; column 1.
+
+2021-Oct-29 13:01:40.375 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:01:42.506 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:01:42.535 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = non
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:01:42.535 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'nomatch' was added to the event queue
+
+2021-Oct-29 13:01:42.535 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'nomatch'.
+  Event origin = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'; line 59
+  Handler location = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'; line 72, column 3
+
+2021-Oct-29 13:01:42.551 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'num_abonne'; line 59; column 1.
+
+2021-Oct-29 13:01:42.551 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:01:44.186 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:01:44.201 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = aide
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:01:44.201 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'help' was added to the event queue
+
+2021-Oct-29 13:01:44.201 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'help'.
+  Event origin = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'
+  Handler location = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'; line 70, column 10
+
+2021-Oct-29 13:01:44.217 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'num_abonne'; line 59; column 1.
+
+2021-Oct-29 13:01:44.217 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:01:46.954 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:01:46.954 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:01:46.969 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 75; column 3.
+
+2021-Oct-29 13:01:46.985 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirm'; line 90; column 3.
+
+2021-Oct-29 13:01:47.008 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:01:50.481 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:01:50.481 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = non
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:01:50.481 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 103; column 10.
+
+2021-Oct-29 13:01:50.496 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'num_abonne'; line 59; column 1.
+
+2021-Oct-29 13:01:50.496 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:01:51.628 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:01:51.643 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:01:51.643 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 75; column 3.
+
+2021-Oct-29 13:01:51.659 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirm'; line 90; column 3.
+
+2021-Oct-29 13:01:51.659 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:01:52.534 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:01:52.535 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:01:52.551 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 103; column 10.
+
+2021-Oct-29 13:01:52.551 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'date_resa'; line 120; column 1.
+
+2021-Oct-29 13:01:52.629 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:00.504 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:00.536 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = midi
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:02:00.536 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'nomatch' was added to the event queue
+
+2021-Oct-29 13:02:00.536 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'nomatch'.
+  Event origin = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'; line 120
+  Handler location = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'; line 129, column 8
+
+2021-Oct-29 13:02:00.536 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'date_resa'; line 120; column 1.
+
+2021-Oct-29 13:02:00.536 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:07.536 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:07.557 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = premier janvier
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:02:07.557 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 131; column 8.
+
+2021-Oct-29 13:02:07.557 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmDate'; line 137; column 3.
+
+2021-Oct-29 13:02:07.573 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:09.602 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:09.602 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:02:09.602 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 152; column 10.
+
+2021-Oct-29 13:02:09.618 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'horaire_resa'; line 170; column 1.
+
+2021-Oct-29 13:02:09.703 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:17.736 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'noinput' was added to the event queue
+
+2021-Oct-29 13:02:17.736 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:17.736 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'noinput'.
+  Event origin = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'; line 170
+  Handler location = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'; line 178, column 8
+
+2021-Oct-29 13:02:17.752 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'horaire_resa'; line 170; column 1.
+
+2021-Oct-29 13:02:17.752 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:20.434 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:20.450 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = treize heures
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:02:20.456 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 181; column 8.
+
+2021-Oct-29 13:02:20.456 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmHoraire'; line 193; column 3.
+
+2021-Oct-29 13:02:20.472 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:22.048 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:22.062 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:02:22.062 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 208; column 10.
+
+2021-Oct-29 13:02:22.070 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'duree_resa'; line 225; column 1.
+
+2021-Oct-29 13:02:22.117 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:36.339 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:36.339 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = trente heures
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:02:36.339 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 236; column 8.
+
+2021-Oct-29 13:02:36.339 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmDuree'; line 243; column 3.
+
+2021-Oct-29 13:02:36.339 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:39.762 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:39.764 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Oct-29 13:02:39.764 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 258; column 10.
+
+2021-Oct-29 13:02:39.764 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'salle_resa'; line 275; column 1.
+
+2021-Oct-29 13:02:39.775 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-29 13:02:46.999 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User has been disconnected.
+
+2021-Oct-29 13:02:46.999 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'connection.disconnect.hangup' was added to the event queue
+
+2021-Oct-29 13:02:46.999 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-29 13:02:46.999 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'connection.disconnect.hangup'.
+  Event origin = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml'
+  Handler location = platform default handler
+
+2021-Oct-29 13:02:47.007 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpretation finished.
+  value returned by <exit> = 
+{
+}
+  value returned by <disconnect> = 
+undefined
+
+2021-Oct-29 13:02:47.098 INFO {N/A} <N/A> [OptimComponents Core]
+Deleted session with ID 'vxmlDialog_0'.
+
