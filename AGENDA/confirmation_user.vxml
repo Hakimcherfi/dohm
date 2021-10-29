@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION : UTF-8 = PAS DE CARACTERES ACCENTUES -->
+<!-- si PB message : Invalid UTF-8 character --> 
+
+<vxml version="2.0" xmlns="http://www.w3.org/2001/vxml">
+
+<meta name="description" content="confirmation utilisateur"/>
+<meta name="author" content="Clement Petit"/>
+<meta name="copyright" content="3A SRI Upssitech"/>
+
+<!-- Sous-dialogue: confirmation utilisateur -->
+
+<link event="help">
+<grammar src="grammaire_aide.grxml" type="application/srgs+xml" />
+</link>
+
+<link event="quit">
+<grammar src="grammaire_quit.grxml" type="application/srgs+xml" />
+</link>
+
+<catch event="quit">
+  Vous avez decide de quitter l'application sans finaliser la demande. Merci et a bientot !
+  <exit/>
+</catch>
+
+<!-- dialogue de demande d'information -->
+
+<form id="confirmation_form">
+<field name="confirmation">
+  <prompt> Pouvez-vous me le confirmer ? </prompt>
+  <!-- Appel a une grammaire externe -->
+  <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
+   
+  <!-- Gestion des erreurs -->
+  <help> Repondez par oui ou non </help>
+  <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
+  <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non </nomatch>
+
+  <filled>
+    <return namelist="confirmation"/>
+  </filled>
+</field>
+
+</form>
+</vxml>
