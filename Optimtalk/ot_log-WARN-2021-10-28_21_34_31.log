@@ -1,0 +1,11 @@
+Created from template: |append [ot_log-WARN-%y-%m-%d_%H_%M_%s.log] 
+Number of records: unlimited
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-28 21:34:40.330 WARN {vxmlDialog_0} <Alarm> [VoiceXML interpreter]
+optimtalk.interpretationError: An unhandled error event 'error.badfetch' occurred (It will be processed by a default platform error handler). The following message was associated with the event: document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml', line 138; Cannot load grammar 'file:/C:/Users/hakim/Desktop/TP/AGENDA/grammaire_confirmer_date_donner_horaire.grxml' since an error occurred in call to Grammar rule manager. Grammar rule manager reports: Referenced unknown rule 'file:/C:/Users/hakim/Desktop/TP/AGENDA/grammaire_nombre_v3.grxml#nombre'.
+

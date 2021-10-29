@@ -1,0 +1,112 @@
+Created from template: |append [ot_log-%y-%m-%d_%H_%M_%s.log] 
+Number of records: 100000
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-28 21:20:54.661 ALW {N/A} <N/A> [OptimComponents Core]
+========== Log start ==========
+
+2021-Oct-28 21:20:54.661 INFO {N/A} <N/A> [OptimComponents Core]
+Created session with ID 'vxmlDialog_0'.
+
+2021-Oct-28 21:20:55.029 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml'.
+
+2021-Oct-28 21:20:55.076 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml' completed.
+  result = success
+
+2021-Oct-28 21:20:55.076 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml'
+
+2021-Oct-28 21:20:55.084 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'agenda'; line 34; column 1.
+
+2021-Oct-28 21:20:55.084 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <block>; line 51; column 1.
+
+2021-Oct-28 21:20:55.111 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'num_abonne'; line 59; column 1.
+
+2021-Oct-28 21:20:55.181 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-28 21:20:56.481 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-28 21:20:56.487 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux
+  confidence = 1
+  mode = voice
+
+2021-Oct-28 21:20:56.487 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 75; column 3.
+
+2021-Oct-28 21:20:56.494 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirm'; line 90; column 3.
+
+2021-Oct-28 21:20:56.518 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-28 21:20:58.027 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-28 21:20:58.034 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Oct-28 21:20:58.042 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 103; column 10.
+
+2021-Oct-28 21:20:58.051 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'date_resa'; line 120; column 1.
+
+2021-Oct-28 21:20:58.176 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-28 21:21:01.264 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-28 21:21:01.287 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux aout
+  confidence = 1
+  mode = voice
+
+2021-Oct-28 21:21:01.302 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirm_date_BIS'; line 134; column 1.
+
+2021-Oct-28 21:21:01.302 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'error.badfetch' was added to the event queue
+
+2021-Oct-28 21:21:01.302 ERR  {vxmlDialog_0} <System message> [VoiceXML interpreter]
+An unhandled error event 'error.badfetch' occurred (It will be processed by a default platform error handler). The following message was associated with the event: document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml', line 138; Cannot load grammar 'file:/C:/Users/hakim/Desktop/TP/AGENDA/grammaire_confirmer_date_donner_horraire.grxml' since an error occurred in call to Resource Loader. Resource Loader reports: Cannot open stream. since an error occurred in call to file stream. file stream reports: Cannot open file "C:/Users/hakim/Desktop/TP/AGENDA/grammaire_confirmer_date_donner_horraire.grxml".
+
+2021-Oct-28 21:21:01.302 WARN {vxmlDialog_0} <Alarm> [VoiceXML interpreter]
+optimtalk.interpretationError: An unhandled error event 'error.badfetch' occurred (It will be processed by a default platform error handler). The following message was associated with the event: document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml', line 138; Cannot load grammar 'file:/C:/Users/hakim/Desktop/TP/AGENDA/grammaire_confirmer_date_donner_horraire.grxml' since an error occurred in call to Resource Loader. Resource Loader reports: Cannot open stream. since an error occurred in call to file stream. file stream reports: Cannot open file "C:/Users/hakim/Desktop/TP/AGENDA/grammaire_confirmer_date_donner_horraire.grxml".
+
+2021-Oct-28 21:21:01.302 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'error.badfetch'.
+  Event origin = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml'; line 138
+  Handler location = platform default handler
+
+2021-Oct-28 21:21:01.341 ERR  {vxmlDialog_0} <user's application> [VoiceXML interpreter]
+Unhandled error event 'error.badfetch' occurred. Associated message: document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml', line 138; Cannot load grammar 'file:/C:/Users/hakim/Desktop/TP/AGENDA/grammaire_confirmer_date_donner_horraire.grxml' since an error occurred in call to Resource Loader. Resource Loader reports: Cannot open stream. since an error occurred in call to file stream. file stream reports: Cannot open file "C:/Users/hakim/Desktop/TP/AGENDA/grammaire_confirmer_date_donner_horraire.grxml".
+
+2021-Oct-28 21:21:01.389 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpretation finished.
+  value returned by <exit> = 
+{
+}
+  value returned by <disconnect> = 
+undefined
+
+2021-Oct-28 21:21:01.505 INFO {N/A} <N/A> [OptimComponents Core]
+Deleted session with ID 'vxmlDialog_0'.
+

@@ -1,0 +1,112 @@
+Created from template: |append [ot_log-%y-%m-%d_%H_%M_%s.log] 
+Number of records: 100000
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Oct-28 21:21:23.653 ALW {N/A} <N/A> [OptimComponents Core]
+========== Log start ==========
+
+2021-Oct-28 21:21:23.653 INFO {N/A} <N/A> [OptimComponents Core]
+Created session with ID 'vxmlDialog_0'.
+
+2021-Oct-28 21:21:24.004 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml'.
+
+2021-Oct-28 21:21:24.052 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml' completed.
+  result = success
+
+2021-Oct-28 21:21:24.052 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml'
+
+2021-Oct-28 21:21:24.060 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'agenda'; line 34; column 1.
+
+2021-Oct-28 21:21:24.068 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <block>; line 51; column 1.
+
+2021-Oct-28 21:21:24.083 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'num_abonne'; line 59; column 1.
+
+2021-Oct-28 21:21:24.145 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-28 21:21:26.823 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-28 21:21:26.831 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux
+  confidence = 1
+  mode = voice
+
+2021-Oct-28 21:21:26.831 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 75; column 3.
+
+2021-Oct-28 21:21:26.855 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirm'; line 90; column 3.
+
+2021-Oct-28 21:21:26.886 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-28 21:21:29.165 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-28 21:21:29.170 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Oct-28 21:21:29.170 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 103; column 10.
+
+2021-Oct-28 21:21:29.178 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'date_resa'; line 120; column 1.
+
+2021-Oct-28 21:21:29.266 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Oct-28 21:21:32.082 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Oct-28 21:21:32.106 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux janvier
+  confidence = 1
+  mode = voice
+
+2021-Oct-28 21:21:32.122 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirm_date_BIS'; line 134; column 1.
+
+2021-Oct-28 21:21:32.293 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+An event 'error.semantic' was added to the event queue
+
+2021-Oct-28 21:21:32.304 ERR  {vxmlDialog_0} <System message> [VoiceXML interpreter]
+An unhandled error event 'error.semantic' occurred (It will be processed by a default platform error handler). The following message was associated with the event: document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml', line 135; The following ECMAScript error occurred during evaluation of attribute 'expr': ReferenceError: date_reservation is not defined
+
+2021-Oct-28 21:21:32.304 WARN {vxmlDialog_0} <Alarm> [VoiceXML interpreter]
+optimtalk.interpretationError: An unhandled error event 'error.semantic' occurred (It will be processed by a default platform error handler). The following message was associated with the event: document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml', line 135; The following ECMAScript error occurred during evaluation of attribute 'expr': ReferenceError: date_reservation is not defined
+
+2021-Oct-28 21:21:32.304 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Processing event 'error.semantic'.
+  Event origin = document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml'; line 135
+  Handler location = platform default handler
+
+2021-Oct-28 21:21:32.311 ERR  {vxmlDialog_0} <user's application> [VoiceXML interpreter]
+Unhandled error event 'error.semantic' occurred. Associated message: document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v2.vxml', line 135; The following ECMAScript error occurred during evaluation of attribute 'expr': ReferenceError: date_reservation is not defined
+
+2021-Oct-28 21:21:32.321 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpretation finished.
+  value returned by <exit> = 
+{
+}
+  value returned by <disconnect> = 
+undefined
+
+2021-Oct-28 21:21:32.429 INFO {N/A} <N/A> [OptimComponents Core]
+Deleted session with ID 'vxmlDialog_0'.
+

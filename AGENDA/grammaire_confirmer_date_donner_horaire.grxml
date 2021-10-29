@@ -7,11 +7,12 @@
       <one-of>
                 <item> 
                         <item repeat="0-1"> A   </item>
-                        <ruleref uri="grammaire_horaireUgo.grxml#Horaire"/> 
+                        <ruleref uri="grammaire_horaire.grxml#Horaire"/> 
                         <tag> out.flag ="0" </tag>
-                        <tag> out.NBTTM = rules.Horaire.NBTTM </tag>
-                        <tag> out.nb_h = rules.Horaire.nb_h </tag>
-                        <tag> out.nb_m = rules.Horaire.nb_m </tag>
+                        <tag> out.NTMN = rules.Horaire.NTMN </tag>
+                        <tag> out.H = rules.Horaire.H </tag>
+                        <tag> out.MN = rules.Horaire.MN </tag>
+                        <tag> out.text = rules.latest().text </tag>
                 </item>
 
                 <item> <ruleref uri="#non" /> <tag> out.flag ="1" </tag> </item>
@@ -34,11 +35,11 @@
 
         
 
-        <rule id="non" >
-               <one-of>
-                        <item repeat="1-2"> non </item>
-               </one-of>
-        </rule>
+<rule id="non" >
+    <one-of>
+		<item repeat="1-3"> non </item>
+    </one-of>
+</rule>
 
 
 
