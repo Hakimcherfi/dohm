@@ -11,6 +11,7 @@
 		<one-of>
 			<item> 100 <tag> out.nomSalle = "100" </tag> </item>
 			<item> 101 <tag> out.nomSalle = "101" </tag> </item>
+			<item> Embiez <tag> out.nomSalle = "Embiez" </tag> </item>
 		</one-of>
         <tag> out.batiment = "" </tag>
         <item repeat="0-1">

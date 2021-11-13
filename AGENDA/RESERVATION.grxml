@@ -22,20 +22,20 @@
         <tag>out.reservation.Horaire = rules.Horaire</tag>
       </item>
       <item> pour
-        <ruleref uri="grammaire_duree.grxml#Duree"/>
+        <ruleref uri="grammaire_duree.grxml#duree"/>
         <tag>out.reservation.Duree = rules.Duree</tag>
       </item>
       <item>
         <item repeat="0-1"> dans </item>
         <item repeat="0-1"> de </item>
-        <ruleref uri="grammaire_lieu.grxml#Lieu"/>
+        <ruleref uri="grammaire_salle.grxml#salle"/>
         <tag>out.reservation.Lieu = rules.Lieu</tag>
       </item>
       <item>
         <item repeat="0-1"> avec </item>
         <item repeat="0-1"> le </item>
         <item repeat="0-1"> le motif </item>
-        <ruleref uri="grammaire_objet.grxml#Objet"/>
+        <ruleref uri="grammaire_motif.grxml#motif"/>
         <tag>out.reservation.Objet = rules.Objet</tag>
       </item>
     </one-of>
@@ -57,19 +57,19 @@
 
 <rule id="askDuree" scope="public">
   <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_duree.grxml#Duree"/> <tag> out = rules.Duree;</tag> </item>
+  <item> <ruleref uri="grammaire_duree.grxml#duree"/> <tag> out = rules.Duree;</tag> </item>
   <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
 </rule>
 
 <rule id="askLieu" scope="public">
   <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_lieu.grxml#Lieu"/> <tag> out = rules.Lieu;</tag> </item>
+  <item> <ruleref uri="grammaire_salle.grxml#salle"/> <tag> out = rules.Lieu;</tag> </item>
   <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
 </rule>
 
 <rule id="askObjet" scope="public">
   <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_objet.grxml#Objet"/> <tag> out = rules.Objet;</tag> </item>
+  <item> <ruleref uri="grammaire_motif.grxml#motif"/> <tag> out = rules.Objet;</tag> </item>
   <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
 </rule>
 
