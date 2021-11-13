@@ -5,7 +5,7 @@
 <vxml version="2.0" xmlns="http://www.w3.org/2001/vxml">
 
 <meta name="description" content="confirmation utilisateur"/>
-<meta name="author" content="Clement Petit"/>
+<meta name="author" content="Hakim Cherfi"/>
 <meta name="copyright" content="3A SRI Upssitech"/>
 
 <!-- Sous-dialogue: confirmation utilisateur -->
@@ -19,7 +19,7 @@
 </link>
 
 <catch event="quit">
-  Vous avez decide de quitter l'application sans finaliser la demande. Merci et a bientot !
+  Vous quittez l'application sans finaliser votre demande. Aurevoir !
   <exit/>
 </catch>
 
@@ -34,7 +34,7 @@
   <!-- Gestion des erreurs -->
   <help> Repondez par oui ou non </help>
   <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-  <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non </nomatch>
+  <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non svp ? </nomatch>
 
   <filled>
     <return namelist="confirmation"/>
