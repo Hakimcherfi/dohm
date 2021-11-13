@@ -1,4 +1,4 @@
-Je veux reserver le lundi deux mars a dix heures pour une heure dans la salle 101 batiment u3 avec reunion
+Je veux reserver le lundi deux mars a dix heures pour une heure dans la salle 101 batiment u3 avec le motif reunion
 Semantic result: {
   reservation: {
     Date: {
