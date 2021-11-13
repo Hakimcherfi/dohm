@@ -2,7 +2,7 @@
 <grammar version="1.0" root="reservation" xml:lang="fr">
 
 <meta name="description" content="grammaire pour une reservation"/>
-<meta name="author" content="Clement Petit"/>
+<meta name="author" content="Hakim Cherfi"/>
 <meta name="copyright" content="free for any purpose"/>
 
 
