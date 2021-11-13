@@ -23,18 +23,18 @@
       </item>
       <item> pour
         <ruleref uri="grammaire_duree.grxml#duree"/>
-        <tag>out.reservation.Duree = rules.text</tag>
+        <tag>out.reservation.Duree = rules.duree.text</tag>
       </item>
       <item>
         <item repeat="0-1"> dans la salle</item>
-        <item repeat="0-1"> salle </item>
+        <item repeat="0-1"> la salle </item>
         <ruleref uri="grammaire_salle.grxml#salle"/>
-        <tag>out.reservation.nomSalle = rules.nomSalle ; out.reservation.batiment = rules.batiment</tag>
+        <tag>out.reservation.nomSalle = rules.salle.nomSalle ; out.reservation.batiment = rules.salle.batiment</tag>
       </item>
       <item>
         <item repeat="0-1"> avec </item>
         <item repeat="0-1"> le </item>
-        <item repeat="0-1"> le motif </item>
+        <item repeat="0-1"> avec le motif </item>
         <ruleref uri="grammaire_motif.grxml#motif"/>
         <tag>out.reservation.motif = rules.motif</tag>
       </item>
@@ -43,35 +43,6 @@
   <ruleref uri="#politesse2"/>
 </rule>
 
-<rule id="askDate" scope="public">
-  <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_dates_v3.grxml#Date"/> <tag> out = rules.Date;</tag> </item>
-  <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
-</rule>
-
-<rule id="askHoraire" scope="public">
-  <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_horaire.grxml#Horaire"/> <tag> out = rules.Horaire;</tag> </item>
-  <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
-</rule>
-
-<rule id="askDuree" scope="public">
-  <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_duree.grxml#duree"/> <tag> out = rules.text;</tag> </item>
-  <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
-</rule>
-
-<rule id="askLieu" scope="public">
-  <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_salle.grxml#salle"/> <tag> out = rules.nomSalle;</tag> </item>
-  <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
-</rule>
-
-<rule id="askObjet" scope="public">
-  <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_motif.grxml#motif"/> <tag> out = rules.text;</tag> </item>
-  <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
-</rule>
 
 <rule id="politesse1">
   <item repeat="0-1"> svp </item>

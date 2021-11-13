@@ -1,1 +1,50 @@
-Je veux reserver le lundi deux mars a dix heures pour une heure
+Je veux reserver le lundi deux mars a dix heures pour une heure dans la salle 101 batiment u3 avec reunion
+Semantic result: {
+  reservation: {
+    Date: {
+      num_jour: 1,
+      nb_jour: 2,
+      num_mois: 2,
+      nb_annee: 0,
+      text: "lundi deux mars"
+    },
+    Horaire: {
+      H: 10,
+      MN: 0,
+      text: "dix heures",
+      NTMN: 600
+    },
+    Duree: "une heure",
+    nomSalle: "101",
+    batiment: "en U3",
+    motif: {
+      text: "reunion"
+    }
+  }
+}
+
+
+Je souhaiterais reserver le lundi deux mars a dix heures pour une heure la salle 101 avec le motif conference merci
+Semantic result: {
+  reservation: {
+    Date: {
+      num_jour: 1,
+      nb_jour: 2,
+      num_mois: 2,
+      nb_annee: 0,
+      text: "lundi deux mars"
+    },
+    Horaire: {
+      H: 10,
+      MN: 0,
+      text: "dix heures",
+      NTMN: 600
+    },
+    Duree: "une heure",
+    nomSalle: "101",
+    batiment: "",
+    motif: {
+      text: "conference"
+    }
+  }
+}
