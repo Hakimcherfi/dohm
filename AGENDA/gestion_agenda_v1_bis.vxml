@@ -2,7 +2,7 @@
 <!-- ATTENTION : UTF-8 = PAS DE CARACTERES ACCENTUES -->
 <!-- si PB message : Invalid UTF-8 character --> 
 <vxml version="2.0" xmlns="http://www.w3.org/2001/vxml">
-<meta name="description" content="Gestion agenda version 0"/>
+<meta name="description" content="Gestion agenda version 1 bis"/>
 <meta name="author" content="Hakim Cherfi"/>
 <meta name="copyright" content="IUP SI M2 Pro Dialogue"/>
 
@@ -87,8 +87,9 @@
   </field>
 
 <!-- Champ/Slot de confirmation  -->
- <subdialog name="confirm_num_abo" src="confirmation_user.vxml#confirmation_form">     
-         <filled>
+ <subdialog name="confirm_num_abo" src="confirmation_user.vxml#confirmation_form">
+
+         <filled> 
                  <if cond="confirm_num_abo.confirmation=='True'">
                      <assign name="message_confirm" expr="'TRACE Numero confirme'" />
                  <else/>
@@ -195,7 +196,7 @@
                      <assign name="message_confirm" expr="'TRACE Horaire confirme'" />
                  <else/>
                      <assign name="message_confirm" expr="'TRACE Horaire non confirme'" />
-                     <clear namelist="confirm_date " />
+                     <clear namelist="confirm_date_BIS " />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 
@@ -230,7 +231,7 @@
                      <assign name="message_confirm" expr="'TRACE Duree confirme'" />
                  <else/>
                      <assign name="message_confirm" expr="'TRACE Duree non confirme'" />
-                     <clear namelist="resa_duree confirm_duree" />
+                     <clear namelist="duree_resa confirm_duree" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 
@@ -262,10 +263,10 @@
 <subdialog name="confirm_lieu" src="confirmation_user.vxml#confirmation_form">
          <filled>
                  <if cond="confirm_lieu.confirmation=='True'">
-                     <assign name="message_confirm" expr="'TRACE Duree confirme'" />
+                     <assign name="message_confirm" expr="'TRACE Lieu confirme'" />
                  <else/>
-                     <assign name="message_confirm" expr="'TRACE Duree non confirme'" />
-                     <clear namelist="resa_lieu confirm_lieu" />
+                     <assign name="message_confirm" expr="'TRACE Lieu non confirme'" />
+                     <clear namelist="salle_resa confirm_lieu" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 
@@ -275,23 +276,7 @@
          </filled>
 </subdialog>
 
-<subdialog name="demande_resa_objet" src="confirmation_user.vxml#confirmation_form">
-	 <filled>
-      <if cond="demande_resa_objet.confirmation=='True'">
-            <assign name="message_confirm" expr="'TRACE Objet demande'" />
-            <clear namelist="resa_objet confirm_objet"/>
-      <else/>
-            <assign name="message_confirm" expr="'TRACE Objet non demande'" />
-            
-      </if>
-                 <!-- Comportement si le mode TRACE est active --> 
 
-      <if cond="mode_trace=='True'">
-                   TRACE Reponse <value expr="message_confirm" />
-      </if>
-
-   </filled>
-  </subdialog>
 
 <!-- Champ/Slot MOTIF -->
 <field name="motif_resa">
@@ -319,13 +304,13 @@
  </field>
 
 <!-- Champ/Slot de confirmation  -->
-<subdialog name="confirm_objet" src="confirmation_user.vxml#confirmation_form" expr="'Fill'">
+<subdialog name="confirm_motif" src="confirmation_user.vxml#confirmation_form">
          <filled>
-                 <if cond="confirm_objet.confirmation=='True'">
-                     <assign name="message_confirm" expr="'TRACE Objet confirme'" />
+                 <if cond="confirm_motif.confirmation=='True'">
+                     <assign name="message_confirm" expr="'TRACE motif confirme'" />
                  <else/>
-                     <assign name="message_confirm" expr="'TRACE Objet non confirme'" />
-                     <clear namelist="resa_objet confirm_objet" />
+                     <assign name="message_confirm" expr="'TRACE motife non confirme'" />
+                     <clear namelist="motif_resa confirm_motif" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 

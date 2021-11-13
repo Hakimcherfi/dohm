@@ -15,7 +15,7 @@
 </link>
 
 <link event="quit">
-<grammar src="grammaire_quit.grxml" type="application/srgs+xml" />
+<grammar src="grammaire_quitter.grxml" type="application/srgs+xml" />
 </link>
 
 <catch event="quit">

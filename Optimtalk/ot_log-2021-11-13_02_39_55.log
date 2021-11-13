@@ -1,0 +1,484 @@
+Created from template: |append [ot_log-%y-%m-%d_%H_%M_%s.log] 
+Number of records: 100000
+Lifetime: unlimited
+Log format:
+date time severity {session id} <category> [source]
+label: message
+===================================================
+
+2021-Nov-13 02:39:55.027 ALW {N/A} <N/A> [OptimComponents Core]
+========== Log start ==========
+
+2021-Nov-13 02:39:55.042 INFO {N/A} <N/A> [OptimComponents Core]
+Created session with ID 'vxmlDialog_0'.
+
+2021-Nov-13 02:39:55.152 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1_bis.vxml'.
+
+2021-Nov-13 02:39:55.184 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1_bis.vxml' completed.
+  result = success
+
+2021-Nov-13 02:39:55.184 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1_bis.vxml'
+
+2021-Nov-13 02:39:55.184 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'agenda'; line 34; column 1.
+
+2021-Nov-13 02:39:55.184 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <block>; line 51; column 1.
+
+2021-Nov-13 02:39:55.201 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'num_abonne'; line 59; column 1.
+
+2021-Nov-13 02:39:55.244 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:39:56.589 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:39:56.607 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:39:56.607 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 75; column 3.
+
+2021-Nov-13 02:39:56.643 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <subdialog> with name 'confirm_num_abo'; line 90; column 2.
+
+2021-Nov-13 02:39:56.658 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'.
+
+2021-Nov-13 02:39:56.675 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form' completed.
+  result = success
+
+2021-Nov-13 02:39:56.675 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'
+
+2021-Nov-13 02:39:56.689 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'confirmation_form'; line 28; column 1.
+
+2021-Nov-13 02:39:56.690 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmation'; line 29; column 1.
+
+2021-Nov-13 02:39:56.690 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:39:58.315 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:39:58.315 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:39:58.332 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 39; column 3.
+
+2021-Nov-13 02:39:58.336 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Back from a subdialog.
+
+2021-Nov-13 02:39:58.336 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 92; column 10.
+
+2021-Nov-13 02:39:58.352 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <block>; line 107; column 1.
+
+2021-Nov-13 02:39:58.352 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'date_resa'; line 113; column 1.
+
+2021-Nov-13 02:39:58.415 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:01.370 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:01.386 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux aout
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:01.386 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirm_date_BIS'; line 127; column 1.
+
+2021-Nov-13 02:40:01.471 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:04.133 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:04.148 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = midi
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:04.148 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 139; column 5.
+
+2021-Nov-13 02:40:04.164 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <subdialog> with name 'confirm_horaire'; line 193; column 1.
+
+2021-Nov-13 02:40:04.190 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'.
+
+2021-Nov-13 02:40:04.190 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form' completed.
+  result = success
+
+2021-Nov-13 02:40:04.190 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'
+
+2021-Nov-13 02:40:04.206 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'confirmation_form'; line 28; column 1.
+
+2021-Nov-13 02:40:04.206 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmation'; line 29; column 1.
+
+2021-Nov-13 02:40:04.222 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:05.073 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:05.073 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:05.073 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 39; column 3.
+
+2021-Nov-13 02:40:05.086 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Back from a subdialog.
+
+2021-Nov-13 02:40:05.086 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 194; column 10.
+
+2021-Nov-13 02:40:05.093 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'duree_resa'; line 210; column 1.
+
+2021-Nov-13 02:40:05.156 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:07.990 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:08.006 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = une heure
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:08.012 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 221; column 8.
+
+2021-Nov-13 02:40:08.028 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <subdialog> with name 'confirm_duree'; line 228; column 1.
+
+2021-Nov-13 02:40:08.045 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'.
+
+2021-Nov-13 02:40:08.060 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form' completed.
+  result = success
+
+2021-Nov-13 02:40:08.060 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'
+
+2021-Nov-13 02:40:08.060 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'confirmation_form'; line 28; column 1.
+
+2021-Nov-13 02:40:08.060 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmation'; line 29; column 1.
+
+2021-Nov-13 02:40:08.091 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:09.377 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:09.389 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = non
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:09.389 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 39; column 3.
+
+2021-Nov-13 02:40:09.404 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Back from a subdialog.
+
+2021-Nov-13 02:40:09.404 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 229; column 10.
+
+2021-Nov-13 02:40:09.404 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'duree_resa'; line 210; column 1.
+
+2021-Nov-13 02:40:09.426 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:12.273 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:12.287 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = deux heures
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:12.287 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 221; column 8.
+
+2021-Nov-13 02:40:12.303 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <subdialog> with name 'confirm_duree'; line 228; column 1.
+
+2021-Nov-13 02:40:12.334 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'.
+
+2021-Nov-13 02:40:12.334 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form' completed.
+  result = success
+
+2021-Nov-13 02:40:12.334 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'
+
+2021-Nov-13 02:40:12.356 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'confirmation_form'; line 28; column 1.
+
+2021-Nov-13 02:40:12.356 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmation'; line 29; column 1.
+
+2021-Nov-13 02:40:12.356 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:14.674 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:14.690 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = non
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:14.690 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 39; column 3.
+
+2021-Nov-13 02:40:14.690 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Back from a subdialog.
+
+2021-Nov-13 02:40:14.705 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 229; column 10.
+
+2021-Nov-13 02:40:14.706 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'duree_resa'; line 210; column 1.
+
+2021-Nov-13 02:40:14.706 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:16.757 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:16.757 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = trois heures
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:16.770 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 221; column 8.
+
+2021-Nov-13 02:40:16.770 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <subdialog> with name 'confirm_duree'; line 228; column 1.
+
+2021-Nov-13 02:40:16.808 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'.
+
+2021-Nov-13 02:40:16.825 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form' completed.
+  result = success
+
+2021-Nov-13 02:40:16.825 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'
+
+2021-Nov-13 02:40:16.844 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'confirmation_form'; line 28; column 1.
+
+2021-Nov-13 02:40:16.844 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmation'; line 29; column 1.
+
+2021-Nov-13 02:40:16.855 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:18.220 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:18.220 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:18.220 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 39; column 3.
+
+2021-Nov-13 02:40:18.235 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Back from a subdialog.
+
+2021-Nov-13 02:40:18.235 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 229; column 10.
+
+2021-Nov-13 02:40:18.235 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'salle_resa'; line 245; column 1.
+
+2021-Nov-13 02:40:18.252 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:25.684 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:25.699 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = 101 batiment u3
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:25.699 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 256; column 8.
+
+2021-Nov-13 02:40:25.699 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <subdialog> with name 'confirm_lieu'; line 263; column 1.
+
+2021-Nov-13 02:40:25.731 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'.
+
+2021-Nov-13 02:40:25.747 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form' completed.
+  result = success
+
+2021-Nov-13 02:40:25.747 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'
+
+2021-Nov-13 02:40:25.763 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'confirmation_form'; line 28; column 1.
+
+2021-Nov-13 02:40:25.763 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmation'; line 29; column 1.
+
+2021-Nov-13 02:40:25.768 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:30.093 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:30.093 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = non
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:30.093 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 39; column 3.
+
+2021-Nov-13 02:40:30.107 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Back from a subdialog.
+
+2021-Nov-13 02:40:30.114 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 264; column 10.
+
+2021-Nov-13 02:40:30.114 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'salle_resa'; line 245; column 1.
+
+2021-Nov-13 02:40:30.132 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:35.384 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:35.384 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = 101 batiment u3
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:35.384 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 256; column 8.
+
+2021-Nov-13 02:40:35.399 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <subdialog> with name 'confirm_lieu'; line 263; column 1.
+
+2021-Nov-13 02:40:35.431 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'.
+
+2021-Nov-13 02:40:35.446 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Preparing of document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form' completed.
+  result = success
+
+2021-Nov-13 02:40:35.446 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting document 'file:/C:/Users/hakim/Desktop/TP/AGENDA/confirmation_user.vxml#confirmation_form'
+
+2021-Nov-13 02:40:35.446 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <form> with id 'confirmation_form'; line 28; column 1.
+
+2021-Nov-13 02:40:35.446 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'confirmation'; line 29; column 1.
+
+2021-Nov-13 02:40:35.468 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:37.339 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:37.355 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = oui
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:37.355 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 39; column 3.
+
+2021-Nov-13 02:40:37.355 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Back from a subdialog.
+
+2021-Nov-13 02:40:37.371 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 264; column 10.
+
+2021-Nov-13 02:40:37.377 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <field> with name 'motif_resa'; line 282; column 1.
+
+2021-Nov-13 02:40:37.377 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Waiting for user's input.
+
+2021-Nov-13 02:40:40.618 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+User's input collection completed.
+
+2021-Nov-13 02:40:40.618 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+The following input was collected:
+  utterance = conference
+  confidence = 1
+  mode = voice
+
+2021-Nov-13 02:40:40.634 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <filled>; line 298; column 8.
+
+2021-Nov-13 02:40:40.650 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpreting <block>; line 324; column 1.
+
+2021-Nov-13 02:40:40.665 INFO {vxmlDialog_0} <Interpretation tracking> [VoiceXML interpreter]
+Interpretation finished.
+  value returned by <exit> = undefined
+  value returned by <disconnect> = 
+undefined
+
+2021-Nov-13 02:40:40.782 INFO {N/A} <N/A> [OptimComponents Core]
+Deleted session with ID 'vxmlDialog_0'.
+
