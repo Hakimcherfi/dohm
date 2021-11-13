@@ -23,11 +23,11 @@
       </item>
       <item> pour
         <ruleref uri="grammaire_duree.grxml#duree"/>
-        <tag>out.reservation.Duree = rules.Duree</tag>
+        <tag>out.reservation.Duree = rules.text</tag>
       </item>
       <item>
-        <item repeat="0-1"> dans </item>
-        <item repeat="0-1"> de </item>
+        <item repeat="0-1"> dans la salle</item>
+        <item repeat="0-1"> salle </item>
         <ruleref uri="grammaire_salle.grxml#salle"/>
         <tag>out.reservation.nomSalle = rules.nomSalle ; out.reservation.batiment = rules.batiment</tag>
       </item>
@@ -57,7 +57,7 @@
 
 <rule id="askDuree" scope="public">
   <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_duree.grxml#duree"/> <tag> out = rules.Duree;</tag> </item>
+  <item> <ruleref uri="grammaire_duree.grxml#duree"/> <tag> out = rules.text;</tag> </item>
   <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
 </rule>
 

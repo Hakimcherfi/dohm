@@ -1,0 +1,116 @@
+OptimTalk VoiceXML interpreter (version 1.10)
+==============================
+Copyright (c) 2004-2010 OptimSys, s.r.o., Czech Republic
+  http://www.optimsys.cz
+
+Interpreting VoiceXML document file:/C:/Users/hakim/Desktop/TP/AGENDA/gestion_agenda_v1.vxml
+
+Bienvenue sur le service de gestion de votre agenda. Aujourd'hui nous sommes le
+Thu Dec 09 2010 15:30:00 GMT-0800 (Pacific Standard Time)
+1291937400000
+Quel est votre numero d'abonne ?
+KEYB> quatre mille
+TRACE VALEUR
+4000
+Votre numero n'est pas entre 0 et 2500
+Quel est votre numero d'abonne ?
+KEYB> deux
+TRACE VALEUR
+2
+Votre numero d'abonne est le
+deux
+Pouvez-vous me le confirmer ?
+KEYB> non
+TRACE Reponse
+TRACE Numero non confirme
+Quel est votre numero d'abonne ?
+KEYB> deux
+TRACE VALEUR
+2
+Votre numero d'abonne est le
+deux
+Pouvez-vous me le confirmer ?
+KEYB> oui
+TRACE Reponse
+TRACE Numero confirme
+Veuillez patienter ... Nous nous connectons a la base abonne....
+A quelle date voulez-vous prendre rdv ?
+KEYB> deux aout
+Votre date est le
+deux aout
+Pouvez-vous me le confirmer ?
+KEYB> non
+TRACE Reponse
+TRACE Date non confirmee
+A quelle date voulez-vous prendre rdv ?
+KEYB> trois aout
+Votre date est le
+trois aout
+Pouvez-vous me le confirmer ?
+KEYB> oui
+TRACE Reponse
+TRACE Date confirmee
+A quelle heure voulez-vous prendre rdv ?
+KEYB> aide
+Veuillez choisir un horaire.
+KEYB> midi
+L'heure de reservation est :
+midi
+Pouvez-vous me le confirmer ?
+KEYB> non
+TRACE Reponse
+TRACE Horaire non confirme
+A quelle heure voulez-vous prendre rdv ?
+KEYB> treize heures
+L'heure de reservation est :
+treize heures
+Pouvez-vous me le confirmer ?
+KEYB> oui
+TRACE Reponse
+TRACE Horaire confirme
+Pour quelle duree souhaitez vous reserver votre salle ?
+KEYB> une heure
+Vous souhaitez reserver pour une duree de
+une heure
+Pouvez-vous me le confirmer ?
+KEYB> non
+TRACE Reponse
+TRACE Duree non confirmee
+Pour quelle duree souhaitez vous reserver votre salle ?
+KEYB> deux heures
+Vous souhaitez reserver pour une duree de
+deux heures
+Pouvez-vous me le confirmer ?
+KEYB> oui
+TRACE Reponse
+TRACE Duree confirmee
+Quelle salle souhaitez vous reserver ?
+KEYB> 101 batiment u3
+Vous souhaitez reserver la salle
+101
+en U3
+Pouvez-vous me le confirmer ?
+KEYB> oui
+TRACE Reponse
+TRACE Salle confirmee
+Quel est votre motif de reservation ? (reunion, conference, aucun)
+KEYB> conference
+TRACE VALEUR
+conference
+Votre motif est
+conference
+Pouvez-vous me le confirmer ?
+KEYB> non
+TRACE Reponse
+TRACE motif non confirme
+Quel est votre motif de reservation ? (reunion, conference, aucun)
+KEYB> aucun
+TRACE VALEUR
+aucun
+Votre motif est
+aucun
+Pouvez-vous me le confirmer ?
+KEYB> oui
+TRACE Reponse
+TRACE motif confirme
+Veuillez patienter ... Reservation confirmee !
