@@ -29,14 +29,14 @@
         <item repeat="0-1"> dans </item>
         <item repeat="0-1"> de </item>
         <ruleref uri="grammaire_salle.grxml#salle"/>
-        <tag>out.reservation.Lieu = rules.Lieu</tag>
+        <tag>out.reservation.nomSalle = rules.nomSalle ; out.reservation.batiment = rules.batiment</tag>
       </item>
       <item>
         <item repeat="0-1"> avec </item>
         <item repeat="0-1"> le </item>
         <item repeat="0-1"> le motif </item>
         <ruleref uri="grammaire_motif.grxml#motif"/>
-        <tag>out.reservation.Objet = rules.Objet</tag>
+        <tag>out.reservation.motif = rules.motif</tag>
       </item>
     </one-of>
   </item>
@@ -63,13 +63,13 @@
 
 <rule id="askLieu" scope="public">
   <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_salle.grxml#salle"/> <tag> out = rules.Lieu;</tag> </item>
+  <item> <ruleref uri="grammaire_salle.grxml#salle"/> <tag> out = rules.nomSalle;</tag> </item>
   <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
 </rule>
 
 <rule id="askObjet" scope="public">
   <item repeat="0-1"> <ruleref uri="#politesse1"/> </item>
-  <item> <ruleref uri="grammaire_motif.grxml#motif"/> <tag> out = rules.Objet;</tag> </item>
+  <item> <ruleref uri="grammaire_motif.grxml#motif"/> <tag> out = rules.text;</tag> </item>
   <item repeat="0-1"> <ruleref uri="#politesse2"/> </item>
 </rule>
 
