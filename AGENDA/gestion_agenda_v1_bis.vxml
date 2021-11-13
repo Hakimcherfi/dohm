@@ -87,25 +87,13 @@
   </field>
 
 <!-- Champ/Slot de confirmation  -->
-  <field name="confirm">
-         <prompt> Pouvez-vous me le confirmer ? </prompt>
-         
-         <!-- Appel a une grammaire externe -->
-         <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
-         
-         <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non. </help>
-         <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ? </nomatch>
-         
-         <!-- Comportement du systeme apres confirmation/infirmation --> 
-
+ <subdialog name="confirm_num_abo" src="confirmation_user.vxml#confirmation_form">     
          <filled>
-                 <if cond="confirm=='True'">
+                 <if cond="confirm_num_abo.confirmation=='True'">
                      <assign name="message_confirm" expr="'TRACE Numero confirme'" />
                  <else/>
                      <assign name="message_confirm" expr="'TRACE Numero non confirme'" />
-                     <clear namelist="num_abonne confirm" />
+                     <clear namelist="num_abonne confirm_num_abo" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 
@@ -113,8 +101,7 @@
                    TRACE Reponse <value expr="message_confirm" />
                  </if>
          </filled>
-
-</field>
+</subdialog>
 
 <block>
        <!-- Simulation autorisation d'acces -->
@@ -202,27 +189,13 @@
 
 </field>
 <!-- Champ/Slot de confirmation  -->
-  <field name="confirmHoraire">
-         <prompt> Pouvez-vous me le confirmer ? </prompt>
-         
-         <!-- Appel a une grammaire externe -->
-         <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
-		 
-         <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non. </help>
-         <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ?</nomatch>
-         
-         <!-- Comportement du systeme apres confirmation/infirmation --> 
-         <!-- OK ==> On sort ou on passe a une autre sous-tache -->
-         <!-- NOK ==> On efface tout et on recommence --> 
-
+<subdialog name="confirm_horaire" src="confirmation_user.vxml#confirmation_form">
          <filled>
-                 <if cond="confirmHoraire=='True'">
+                 <if cond="confirm_horaire.confirmation=='True'">
                      <assign name="message_confirm" expr="'TRACE Horaire confirme'" />
                  <else/>
                      <assign name="message_confirm" expr="'TRACE Horaire non confirme'" />
-                     <clear namelist="horaire_resa confirmHoraire" />
+                     <clear namelist="confirm_date " />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 
@@ -230,8 +203,7 @@
                    TRACE Reponse <value expr="message_confirm" />
                  </if>
          </filled>
-
-</field>
+</subdialog>
 
 <!-- Champ/Slot DUREE de RESERVATION  -->
 <field name="duree_resa">
@@ -252,27 +224,13 @@
 </field>
 
 <!-- Champ/Slot de confirmation  -->
-  <field name="confirmDuree">
-         <prompt> Pouvez-vous me le confirmer ? </prompt>
-         
-         <!-- Appel a une grammaire externe -->
-         <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
-         
-         <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non </help>
-         <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non </nomatch>
-         
-         <!-- Comportement du systeme apres confirmation/infirmation --> 
-         <!-- OK ==> On sort ou on passe a une autre sous-tache -->
-         <!-- NOK ==> On efface tout et on recommence --> 
-
+<subdialog name="confirm_duree" src="confirmation_user.vxml#confirmation_form">
          <filled>
-                 <if cond="confirmDuree=='True'">
-                     <assign name="message_confirm" expr="'TRACE Duree confirmee'" />
+                 <if cond="confirm_duree.confirmation=='True'">
+                     <assign name="message_confirm" expr="'TRACE Duree confirme'" />
                  <else/>
-                     <assign name="message_confirm" expr="'TRACE Duree non confirmee'" />
-                     <clear namelist="duree_resa confirmDuree" />
+                     <assign name="message_confirm" expr="'TRACE Duree non confirme'" />
+                     <clear namelist="resa_duree confirm_duree" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 
@@ -280,8 +238,7 @@
                    TRACE Reponse <value expr="message_confirm" />
                  </if>
          </filled>
-
-</field>
+</subdialog>
 
 <!-- Champ/Slot SALLE de RESERVATION  -->
 <field name="salle_resa">
@@ -302,27 +259,13 @@
 </field>
 
 <!-- Champ/Slot de confirmation  -->
-  <field name="confirmSalle">
-         <prompt> Pouvez-vous me le confirmer ? </prompt>
-         
-         <!-- Appel a une grammaire externe -->
-         <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
-         
-         <!-- Gestion des erreurs -->
-         <help> Repondez par oui ou non </help>
-         <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-         <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou par non </nomatch>
-         
-         <!-- Comportement du systeme apres confirmation/infirmation --> 
-         <!-- OK ==> On sort ou on passe a une autre sous-tache -->
-         <!-- NOK ==> On efface tout et on recommence --> 
-
+<subdialog name="confirm_lieu" src="confirmation_user.vxml#confirmation_form">
          <filled>
-                 <if cond="confirmSalle=='True'">
-                     <assign name="message_confirm" expr="'TRACE Salle confirmee'" />
+                 <if cond="confirm_lieu.confirmation=='True'">
+                     <assign name="message_confirm" expr="'TRACE Duree confirme'" />
                  <else/>
-                     <assign name="message_confirm" expr="'TRACE Salle non confirmee'" />
-                     <clear namelist="salle_resa confirmSalle" />
+                     <assign name="message_confirm" expr="'TRACE Duree non confirme'" />
+                     <clear namelist="resa_lieu confirm_lieu" />
                  </if>
                  <!-- Comportement si le mode TRACE est active --> 
 
@@ -330,8 +273,25 @@
                    TRACE Reponse <value expr="message_confirm" />
                  </if>
          </filled>
+</subdialog>
 
-</field>
+<subdialog name="demande_resa_objet" src="confirmation_user.vxml#confirmation_form">
+	 <filled>
+      <if cond="demande_resa_objet.confirmation=='True'">
+            <assign name="message_confirm" expr="'TRACE Objet demande'" />
+            <clear namelist="resa_objet confirm_objet"/>
+      <else/>
+            <assign name="message_confirm" expr="'TRACE Objet non demande'" />
+            
+      </if>
+                 <!-- Comportement si le mode TRACE est active --> 
+
+      <if cond="mode_trace=='True'">
+                   TRACE Reponse <value expr="message_confirm" />
+      </if>
+
+   </filled>
+  </subdialog>
 
 <!-- Champ/Slot MOTIF -->
 <field name="motif_resa">
@@ -359,34 +319,21 @@
  </field>
 
 <!-- Champ/Slot de confirmation  -->
- <field name="confirm_motif">
-        <prompt> Pouvez-vous me le confirmer ? </prompt>
-        
-        <!-- Appel a une grammaire externe -->
-        <grammar src="grammaire_act_lang_confirmation_v2.grxml" type="application/srgs+xml" />
-        
-        <!-- Gestion des erreurs -->
-        <help> Repondez par oui ou non. </help>
-        <noinput> Je n'ai pas entendu. Pouvez-vous repeter ? </noinput>
-        <nomatch> Je ne vous ai pas compris. Pouvez-vous repondre par oui ou non ? </nomatch>
-        
-        <!-- Comportement du systeme apres confirmation/infirmation --> 
+<subdialog name="confirm_objet" src="confirmation_user.vxml#confirmation_form" expr="'Fill'">
+         <filled>
+                 <if cond="confirm_objet.confirmation=='True'">
+                     <assign name="message_confirm" expr="'TRACE Objet confirme'" />
+                 <else/>
+                     <assign name="message_confirm" expr="'TRACE Objet non confirme'" />
+                     <clear namelist="resa_objet confirm_objet" />
+                 </if>
+                 <!-- Comportement si le mode TRACE est active --> 
 
-        <filled>
-                <if cond="confirm_motif=='True'">
-                    <assign name="message_confirm" expr="'TRACE motif confirme'" />
-                <else/>
-                    <assign name="message_confirm" expr="'TRACE motif non confirme'" />
-                    <clear namelist="motif_resa confirm_motif" />
-                </if>
-                <!-- Comportement si le mode TRACE est active --> 
-
-                <if cond="mode_trace=='True'">
-                  TRACE Reponse <value expr="message_confirm" />
-                </if>
-        </filled>
-
-</field>
+                 <if cond="mode_trace=='True'">
+                   TRACE Reponse <value expr="message_confirm" />
+                 </if>
+         </filled>
+</subdialog>
 
 
 <block>
