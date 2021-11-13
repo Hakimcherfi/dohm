@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.0" xmlns="http://www.w3.org/2001/vxml">
+
+<meta name="description" content="Reservation reunion"/>
+<meta name="author" content="Clement Petit"/>
+<meta name="copyright" content="free for any purpose"/>
+
+<link event="help">
+<grammar src="grammaire_aide.grxml" type="application/srgs+xml" />
+</link>
+
+<form id="start">
+  <var name="summarization"/>
+
+  <nomatch>
+    <prompt> Je ne vous ai toujours pas compris. </prompt>
+    <reprompt/>
+  </nomatch>
+  <nomatch count="3">
+    <prompt> Je ne vous ai toujours pas compris. C'est votre derniere chance. </prompt>
+    <reprompt/>
+  </nomatch>
+  <nomatch count="4">
+    <prompt> Desole, je ne vous ai toujours pas compris. J'abandonne. Au revoir. </prompt>
+    <exit/>
+  </nomatch>
+
+  <help>
+    Sorry, no help is available.
+  </help>
+
+  <grammar src="Reservation.grxml"/>
+
+  <initial name="mixed">
+    Bienvenue sur le service de reservation de reunion. Veuillez renseigner les differents champs (date, horaire, duree, lieu, objet).
+    <nomatch>
+      Je ne vous ai pas entendu. Veuillez specifier: la date, l'horaire, la duree, le lieu et l'objet.
+    </nomatch>
+    <nomatch count="2">
+      Desole, je ne vous ai toujours pas entendu. Je vais vous demander les informations une par une
+      <assign name="mixed" expr="true"/>
+      <reprompt/>
+    </nomatch>
+    <help>
+      Vous pouvez renseigner la date, l'horaire, la duree, le lieu et l'objet de le reunion
+    </help>
+  </initial>
+
+  <filled mode="any" namelist="reudate reuhoraire reuduree reulieu reuobjet">
+    <assign name="summarization" expr="'J\'ai bien compris votre demande: '"/>
+  </filled>
+
+  <field name="reudate" slot="reservation.Date">
+    Quand voulez vous plannifier votre reunion ?
+    <grammar src="Reservation.grxml#askDate"/>
+    <nomatch>
+      Je ne vous ai pas entendu. Veuillez donner une date valide (Exemple: Lundi deux mars)
+    </nomatch>
+    <help>
+      Veuillez donner une date valide (Exemple: Lundi deux mars)
+    </help>
+    <filled>
+      <assign name="summarization" expr="summarization + ' le ' + reudate.text + ' '"/>
+    </filled>
+  </field>
+
+ <field name="reuhoraire" slot="reservation.Horaire">
+    A quelle horaire voulez vous plannifiez votre reunion ?
+    <grammar src="Reservation.grxml#askHoraire"/>
+    <nomatch>
+      Je ne vous ai pas entendu. Veuillez donner un horaire valide (Exemple: dix heures trente)
+    </nomatch>
+    <help>
+      Veuillez donner un horaire valide (Exemple: dix heures trente)
+    </help>
+    <filled>
+      <assign name="summarization" expr="summarization +  ' a ' + reuhoraire.text + ' '"/>
+    </filled>
+  </field>
+
+  <field name="reuduree" slot="reservation.Duree">
+    Quelle duree pour votre reunion ?
+    <grammar src="Reservation.grxml#askDuree"/>
+    <nomatch>
+      Je ne vous ai pas entendu. Veuillez donner une duree valide.
+    </nomatch>
+    <help>
+      Veuillez donner une duree valide.
+    </help>
+    <filled>
+      <assign name="summarization" expr="summarization +  ' pour ' + reuduree.text + ' '"/>
+    </filled>
+  </field>
+
+<field name="reulieu" slot="reservation.Lieu">
+    Ou voulez vous plannifier votre reunion ?
+    <grammar src="Reservation.grxml#askLieu"/>
+    <nomatch>
+      Je ne vous ai pas entendu. Veuillez donner un lieu valide (Exemple: Batiment U4 Salle deux)
+    </nomatch>
+    <help>
+      Veuillez donner un lieu valide (Exemple: Batiment U4 Salle deux)
+    </help>
+    <filled>
+      <assign name="summarization" expr="summarization +  ' dans ' + reulieu.text + ' '"/>
+    </filled>
+  </field>
+
+  <field name="reuobjet" slot="reservation.Objet">
+    Quelle est l'objet de votre reunion ? (Information / Revue / Echanges / Resolution de problemes / Prise de decision)
+    <grammar src="Reservation.grxml#askObjet"/>
+    <nomatch>
+      Je ne vous ai pas entendu. Veuillez donner un objet parmi la liste suivante: Information / Revue / Echanges / Resolution de problemes / Prise de decision
+    </nomatch>
+    <help>
+      Veuillez donner un objet parmi la liste suivante: Information / Revue / Echanges / Resolution de problemes / Prise de decision
+    </help>
+    <filled>
+      <assign name="summarization" expr="summarization +  ' avec le motif ' + reuobjet.text + ' '"/>
+    </filled>
+  </field>
+
+  <filled mode="any" namelist="reudate reuhoraire reuduree reulieu reuobjet">
+    <prompt>
+      <value expr="summarization"/>
+    </prompt>
+  </filled>
+
+
+  <block>
+    <script> <![CDATA[
+      summarization = 'Le ';
+      summarization += reudate.text;
+      summarization += ' a ';
+      summarization += reuhoraire.text;
+      summarization += ' pendant ';
+      summarization += reuduree.text;
+      summarization += ' dans ';
+      summarization += reulieu.text;
+      summarization += ' avec pour objet ';
+      summarization += reuobjet.text;
+    ]]> </script>
+    <prompt>
+      Merci pour votre reservation. Details de la reservation:  <value expr="summarization"/>
+    </prompt>
+  </block>
+</form>
+
+</vxml>
